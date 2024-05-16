@@ -3,15 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 public class ItemBehavior : MonoBehaviour
 {
-    // 1
+    // Removes the Item from the map and tells that has been collected when the player touches it
     void OnCollisionEnter(Collision collision)
     {
-        // 2
         if (collision.gameObject.name == "Player")
         {
-            // 3
             Destroy(this.transform.gameObject);
-            // 4
             Debug.Log("Item collected!");
         }
     }

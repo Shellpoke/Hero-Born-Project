@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
-    // 1
     void OnTriggerEnter(Collider other)
     {
-        //2
+        //Tells when player is in range
         if (other.name == "Player")
         {
             Debug.Log("Player detected - attack!");
@@ -16,7 +15,7 @@ public class EnemyBehavior : MonoBehaviour
     // 3
     void OnTriggerExit(Collider other)
     {
-        // 4
+        //Tells when player is out of range
         if (other.name == "Player")
         {
             Debug.Log("Player out of range, resume patrol");

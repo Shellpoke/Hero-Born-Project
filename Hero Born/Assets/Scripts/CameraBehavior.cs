@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class CameraBehavior : MonoBehaviour
 {
-    // 1
+    // Sets distance of camera from player, can be edited on inspector.
     public Vector3 CamOffset = new Vector3(0f, 1.2f, -2.6f);
-    // 2
-    private Transform _target;
+    private Transform Target;
 
     // Start is called before the first frame update
     void Start()
     {
-        // 3
-        _target = GameObject.Find("Player").transform;
+        // Gets information about the player's transform component.
+        Target = GameObject.Find("Player").transform;
     }
 
     // Update is called once per frame
@@ -21,12 +20,11 @@ public class CameraBehavior : MonoBehaviour
     {
         
     }
-        //4
+
     void LateUpdate()
     {
-        // 5
-        this.transform.position = _target.TransformPoint(CamOffset);
-        // 6
-        this.transform.LookAt(_target);
+        // Sets camera behind the target.
+        this.transform.position = Target.TransformPoint(CamOffset);
+        this.transform.LookAt(Target);
     }
 }
