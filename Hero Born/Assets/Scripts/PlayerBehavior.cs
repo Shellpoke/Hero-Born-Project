@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerBehavior : MonoBehaviour
 {
     //MoveSpeed and Rotatespeed sets player speed and jump speed.
-    public float MoveSpeed = 10f;
-    public float RotateSpeed = 75f;
+    public float MoveSpeed = 15f;
+    public float RotateSpeed = 95f;
     private float VertInput;
     private float HorInput;
     private Rigidbody Rigbod;
